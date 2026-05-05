@@ -117,13 +117,71 @@ const observer = new IntersectionObserver((entries) => {
 
 document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
 
-/* ---- Reservation form ---- */
+/* ---- Reservation form — Email + WhatsApp notification ---- */
 const reserveForm = document.getElementById('reserveForm');
-const toast = document.getElementById('toast');
+const toast      = document.getElementById('toast');
 
-reserveForm.addEventListener('submit', (e) => {
+reserveForm.addEventListener('submit', async (e) => {
   e.preventDefault();
-  toast.classList.add('show');
-  reserveForm.reset();
-  setTimeout(() => toast.classList.remove('show'), 4000);
+
+  const name     = document.getElementById('fname').value.trim();
+  const phone    = document.getElementById('fphone').value.trim();
+  const datetime = document.getElementById('fdate').value;
+  const guests   = document.getElementById('fguests').value;
+  const seating  = document.getElementById('fseating').value;
+
+  const submitBtn = document.getElementById('submitReserve');
+  submitBtn.textContent = 'Sending…';
+  submitBtn.disabled = true;
+
+  try {
+    /* -- Email via Formsubmit.co (free, no signup required) -- */
+    const res = await fetch('https://formsubmit.co/ajax/honor911n@gmail.com', {
+      method : 'POST',
+      headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+      body   : JSON.stringify({
+        name,
+        phone,
+        'Date & Time' : datetime,
+        'No. of Guests': guests,
+        'Seating'     : seating,
+        _subject      : `🍽️ New Table Reservation — ${name}`,
+        _captcha      : 'false',
+        _template     : 'table',
+      }),
+    });
+
+    const data = await res.json();
+
+    if (String(data.success) === 'true') {
+      /* -- Success toast -- */
+      toast.textContent = '✅ Table Reserved! Check WhatsApp for confirmation.';
+      toast.classList.add('show');
+      setTimeout(() => toast.classList.remove('show'), 5000);
+      reserveForm.reset();
+
+      /* -- WhatsApp alert to restaurant (+91 9161485886) -- */
+      const waMsg =
+        `🍽️ *New Reservation — Alimento*\n\n` +
+        `👤 Name: ${name}\n` +
+        `📞 Phone: ${phone}\n` +
+        `📅 Date/Time: ${datetime}\n` +
+        `👥 Guests: ${guests}\n` +
+        `🪑 Seating: ${seating}`;
+      setTimeout(() => {
+        window.open(`https://wa.me/919161485886?text=${encodeURIComponent(waMsg)}`, '_blank');
+      }, 600);
+
+    } else {
+      throw new Error('Submission failed');
+    }
+
+  } catch {
+    toast.textContent = '⚠️ Could not send. Please call +91 9161485886.';
+    toast.classList.add('show');
+    setTimeout(() => toast.classList.remove('show'), 5000);
+  } finally {
+    submitBtn.textContent = 'Book Your Table Now';
+    submitBtn.disabled = false;
+  }
 });
