@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<title>Alimento Restaurant & Café | Where Taste Meets Experience</title>
+<meta name="description" content="A premium dining destination in Prayagraj for unforgettable moments, delicious cuisine, and vibrant ambiance. Dine-in, delivery, rooftop seating & live music."/>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+
+<!-- NAV -->
+<nav id="navbar">
+  <div class="nav-inner">
+    <a href="#hero" class="logo">Alimento<span>.</span></a>
+    <ul class="nav-links">
+      <li><a href="#about">About</a></li>
+      <li><a href="#menu">Menu</a></li>
+      <li><a href="#why-us">Experience</a></li>
+      <li><a href="#gallery">Gallery</a></li>
+      <li><a href="#reviews">Reviews</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <a href="#reserve" class="btn-nav">Reserve a Table</a>
+    <button class="hamburger" id="hamburger" aria-label="Toggle menu">&#9776;</button>
+  </div>
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="#about">About</a>
+    <a href="#menu">Menu</a>
+    <a href="#why-us">Experience</a>
+    <a href="#gallery">Gallery</a>
+    <a href="#reviews">Reviews</a>
+    <a href="#contact">Contact</a>
+    <a href="#reserve" class="btn-gold">Reserve a Table</a>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section id="hero">
+  <div class="hero-overlay"></div>
+  <img src="hero.png" alt="Alimento rooftop dining" class="hero-bg"/>
+  <div class="hero-content">
+    <p class="hero-eyebrow">Restaurant &amp; Café · Prayagraj</p>
+    <h1>Where Taste Meets<br/><em>Experience</em></h1>
+    <p class="hero-sub">A premium dining destination for unforgettable moments,<br/>delicious cuisine, and vibrant ambiance.</p>
+    <div class="hero-ctas">
+      <a href="#reserve" class="btn-primary" id="heroReserve">Reserve a Table</a>
+      <a href="#menu" class="btn-secondary" id="heroMenu">Explore Menu</a>
+      <a href="tel:+919161485886" class="btn-ghost" id="heroOrder">Order Online</a>
+    </div>
+    <div class="rating-badge">⭐ 4.3+ Rated by Guests</div>
+  </div>
+</section>
+
+<!-- SERVICES BAR -->
+<div class="services-bar" id="services">
+  <div class="services-inner">
+    <div class="service-badge">🍽️ Dine-In</div>
+    <div class="service-badge">🚗 Drive-Through</div>
+    <div class="service-badge">🛵 Delivery</div>
+    <div class="service-badge">📦 No-Contact Delivery</div>
+    <div class="service-badge">🥡 Takeaway</div>
+    <div class="service-badge">🌿 Outdoor Seating</div>
+  </div>
+</div>
+
+<!-- ABOUT -->
+<section id="about">
+  <div class="container two-col">
+    <div class="about-img-wrap">
+      <img src="about.png" alt="Alimento interior" class="about-img"/>
+      <div class="about-pill">Est. in Prayagraj</div>
+    </div>
+    <div class="about-text">
+      <p class="section-label">Our Story</p>
+      <h2>More Than Just a Place to Eat</h2>
+      <p class="story">Alimento Restaurant and Café is more than just a place to eat — it's where flavors, ambiance, and people come together. Nestled in the heart of Prayagraj, we craft every dish with passion and every moment with care. Whether you're here for a quiet coffee, a family feast, or a rooftop evening with music — Alimento is your experience.</p>
+      <p class="tagline-pull">"A place where moments turn into memories."</p>
+      <div class="about-highlights">
+        <div class="hl-item"><span class="hl-icon">♿</span><span>Accessible for Everyone</span></div>
+        <div class="hl-item"><span class="hl-icon">👨‍👩‍👧</span><span>Family &amp; Couple Friendly</span></div>
+        <div class="hl-item"><span class="hl-icon">⚡</span><span>Fast Delivery &amp; Takeaway</span></div>
+        <div class="hl-item"><span class="hl-icon">🌇</span><span>Rooftop Seating Experience</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- MENU -->
+<section id="menu" class="bg-beige">
+  <div class="container">
+    <p class="section-label centered">Culinary Journey</p>
+    <h2 class="centered">Our Menu</h2>
+    <p class="section-sub centered">From quick bites to grand feasts — a world of flavours under one roof.</p>
+    <div class="menu-tabs">
+      <button class="tab active" data-cat="bites">Quick Bites</button>
+      <button class="tab" data-cat="pizza">Pizza &amp; Italian</button>
+      <button class="tab" data-cat="asian">Asian</button>
+      <button class="tab" data-cat="main">Main Course</button>
+      <button class="tab" data-cat="drinks">Beverages</button>
+      <button class="tab" data-cat="combos">Combos</button>
+    </div>
+    <div class="menu-grid" id="menuGrid">
+      <!-- injected by JS -->
+    </div>
+    <div class="menu-ctas centered">
+      <a href="#reserve" class="btn-primary">Explore Menu</a>
+      <a href="#reserve" class="btn-outline">View Full Menu</a>
+    </div>
+  </div>
+</section>
+
+<!-- WHY CHOOSE US -->
+<section id="why-us">
+  <div class="container">
+    <p class="section-label centered">The Alimento Difference</p>
+    <h2 class="centered">Why Choose Us</h2>
+    <div class="why-grid">
+      <div class="why-card"><div class="why-icon">🌍</div><h3>Wide Cuisine Variety</h3><p>Indian, Italian, Chinese &amp; Café classics — something for every palate.</p></div>
+      <div class="why-card"><div class="why-icon">🌇</div><h3>Rooftop Dining</h3><p>Dine under the stars with panoramic city views in a magical setting.</p></div>
+      <div class="why-card"><div class="why-icon">🎵</div><h3>Live Music Nights</h3><p>Enjoy live acoustic performances that elevate every evening.</p></div>
+      <div class="why-card"><div class="why-icon">♿</div><h3>Accessible for Everyone</h3><p>Wheelchair-friendly spaces ensuring inclusivity for all our guests.</p></div>
+      <div class="why-card"><div class="why-icon">👨‍👩‍👧</div><h3>Family &amp; Couple Friendly</h3><p>Comfortable zones for families, date nights &amp; corporate gatherings.</p></div>
+      <div class="why-card"><div class="why-icon">🚀</div><h3>Full-Service Flexibility</h3><p>Dine-in, delivery, takeaway or drive-through — your choice, our pleasure.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- GALLERY -->
+<section id="gallery" class="bg-dark">
+  <div class="container">
+    <p class="section-label centered light">Visual Stories</p>
+    <h2 class="centered light">Experience Alimento</h2>
+    <div class="gallery-grid">
+      <div class="g-item g-large"><img src="hero.png" alt="Rooftop ambiance"/><div class="g-overlay">Rooftop Night Vibe</div></div>
+      <div class="g-item"><img src="food.png" alt="Premium food platter"/><div class="g-overlay">Premium Platters</div></div>
+      <div class="g-item"><img src="coffee.png" alt="Artisan coffee"/><div class="g-overlay">Artisan Beverages</div></div>
+      <div class="g-item"><img src="music.png" alt="Live music"/><div class="g-overlay">Live Music Evenings</div></div>
+      <div class="g-item"><img src="about.png" alt="Cozy interior"/><div class="g-overlay">Cozy Interior</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- REVIEWS -->
+<section id="reviews">
+  <div class="container">
+    <p class="section-label centered">What Guests Say</p>
+    <h2 class="centered">Guest Reviews</h2>
+    <div class="carousel-track" id="reviewTrack">
+      <div class="review-card active">
+        <div class="stars">★★★★★</div>
+        <p>"The rooftop ambiance is absolutely magical! Great ambiance, delicious food and warm service. Ideal for a special evening with someone you love."</p>
+        <div class="reviewer"><strong>Priya S.</strong><span>Prayagraj</span></div>
+      </div>
+      <div class="review-card">
+        <div class="stars">★★★★★</div>
+        <p>"Brought my whole family here and everyone loved it. The menu variety is incredible — Indian, Italian, Chinese all under one roof. Kids loved the pasta!"</p>
+        <div class="reviewer"><strong>Rahul M.</strong><span>Lucknow</span></div>
+      </div>
+      <div class="review-card">
+        <div class="stars">★★★★☆</div>
+        <p>"Perfect hangout spot! Live music nights are a vibe. The honey chilli potato and cappuccino are an unbeatable combo. Coming back for sure."</p>
+        <div class="reviewer"><strong>Ananya K.</strong><span>Prayagraj</span></div>
+      </div>
+      <div class="review-card">
+        <div class="stars">★★★★★</div>
+        <p>"Hosted our team lunch here. Private dining area, great food, excellent service. The grilled chicken steak was restaurant-quality. Highly recommended!"</p>
+        <div class="reviewer"><strong>Sanjay T.</strong><span>Corporate Client</span></div>
+      </div>
+    </div>
+    <div class="carousel-dots" id="carouselDots"></div>
+  </div>
+</section>
+
+<!-- RESERVATION -->
+<section id="reserve" class="bg-beige">
+  <div class="container two-col reserve-wrap">
+    <div class="reserve-text">
+      <p class="section-label">Reserve Your Spot</p>
+      <h2>Book Your Table Now</h2>
+      <p>Whether it's a romantic dinner, family gathering, or corporate lunch — secure your seat at Alimento.</p>
+      <ul class="reserve-perks">
+        <li>✓ Instant confirmation</li>
+        <li>✓ Special occasion arrangements available</li>
+        <li>✓ Private dining options</li>
+        <li>✓ Rooftop &amp; indoor seating</li>
+      </ul>
+    </div>
+    <form class="reserve-form" id="reserveForm">
+      <div class="form-row">
+        <div class="form-group">
+          <label for="fname">Full Name</label>
+          <input type="text" id="fname" name="name" placeholder="Your name" required/>
+        </div>
+        <div class="form-group">
+          <label for="fphone">Phone Number</label>
+          <input type="tel" id="fphone" name="phone" placeholder="+91 XXXXX XXXXX" required/>
+        </div>
+      </div>
+      <div class="form-row">
+        <div class="form-group">
+          <label for="fdate">Date &amp; Time</label>
+          <input type="datetime-local" id="fdate" name="datetime" required/>
+        </div>
+        <div class="form-group">
+          <label for="fguests">Number of Guests</label>
+          <select id="fguests" name="guests">
+            <option>1 Guest</option>
+            <option>2 Guests</option>
+            <option>3-4 Guests</option>
+            <option>5-8 Guests</option>
+            <option>9+ Guests</option>
+          </select>
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="fseating">Seating Preference</label>
+        <select id="fseating" name="seating">
+          <option>Rooftop</option>
+          <option>Indoor</option>
+          <option>Private Dining</option>
+          <option>Outdoor</option>
+        </select>
+      </div>
+      <button type="submit" class="btn-primary full" id="submitReserve">Book Your Table Now</button>
+      <p class="form-note">We'll confirm your booking via call within 30 minutes.</p>
+    </form>
+  </div>
+</section>
+
+<!-- CONTACT & MAP -->
+<section id="contact">
+  <div class="container two-col">
+    <div class="contact-info">
+      <p class="section-label">Find Us</p>
+      <h2>Location &amp; Contact</h2>
+      <div class="contact-items">
+        <div class="c-item">
+          <span class="c-icon">📍</span>
+          <div><strong>Address</strong><p>FR89+5V Prayagraj,<br/>Uttar Pradesh, India</p></div>
+        </div>
+        <div class="c-item">
+          <span class="c-icon">📞</span>
+          <div><strong>Phone</strong><p><a href="tel:+919161485886">+91 9161485886</a></p></div>
+        </div>
+        <div class="c-item">
+          <span class="c-icon">✉️</span>
+          <div><strong>Email</strong><p><a href="mailto:honor911n@gmail.com">honor911n@gmail.com</a></p></div>
+        </div>
+        <div class="c-item">
+          <span class="c-icon">🕐</span>
+          <div><strong>Hours</strong><p>Mon–Sun: 11:00 AM – 11:00 PM</p></div>
+        </div>
+      </div>
+      <div class="contact-ctas">
+        <a href="https://maps.google.com/?q=FR89+5V+Prayagraj+Uttar+Pradesh+India" target="_blank" rel="noopener" class="btn-primary" id="getDirections">Get Directions</a>
+        <a href="tel:+919161485886" class="btn-outline" id="callNow">Call Now</a>
+      </div>
+    </div>
+    <div class="map-wrap">
+      <iframe title="Alimento Location Map" src="https://maps.google.com/maps?q=Prayagraj,Uttar+Pradesh,India&output=embed" width="100%" height="380" style="border:0;border-radius:16px;" allowfullscreen loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer id="footer">
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <p class="footer-logo">Alimento<span>.</span></p>
+      <p class="footer-tagline">Where Taste Meets Experience</p>
+      <div class="social-icons">
+        <a href="#" aria-label="Instagram" id="igLink">📸</a>
+        <a href="#" aria-label="Facebook" id="fbLink">📘</a>
+        <a href="#" aria-label="YouTube" id="ytLink">▶️</a>
+        <a href="https://wa.me/919161485886" aria-label="WhatsApp" id="waLink">💬</a>
+      </div>
+    </div>
+    <div class="footer-col">
+      <h4>Quick Links</h4>
+      <a href="#about">About Us</a>
+      <a href="#menu">Menu</a>
+      <a href="#gallery">Gallery</a>
+      <a href="#reviews">Reviews</a>
+      <a href="#reserve">Reservations</a>
+      <a href="#contact">Contact</a>
+    </div>
+    <div class="footer-col">
+      <h4>Opening Hours</h4>
+      <p>Monday – Friday<br/><strong>11:00 AM – 11:00 PM</strong></p>
+      <p>Saturday – Sunday<br/><strong>10:00 AM – 11:30 PM</strong></p>
+    </div>
+    <div class="footer-col">
+      <h4>Services</h4>
+      <p>Dine-In</p><p>Delivery</p><p>Takeaway</p><p>Drive-Through</p><p>Private Dining</p><p>Rooftop Seating</p>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>© 2025 Alimento Restaurant &amp; Café. All rights reserved. | Prayagraj, UP, India</p>
+  </div>
+</footer>
+
+<!-- Booking success toast -->
+<div class="toast" id="toast">✅ Table Reserved! We'll call you shortly.</div>
+
+<script src="script.js"></script>
+</body>
+</html>
