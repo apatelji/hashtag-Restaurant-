@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<title>Reservation Confirmed | Alimento Restaurant & Café</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Poppins:wght@400;500;600&display=swap" rel="stylesheet"/>
+<style>
+  :root {
+    --charcoal:#1C1C1C; --beige:#F5E9DC; --gold:#C8A96A; --olive:#6F7D60; --white:#FFFFFF;
+  }
+  *{box-sizing:border-box;margin:0;padding:0;}
+  body{font-family:'Poppins',sans-serif;background:var(--beige);min-height:100vh;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:40px 20px;}
+  .card{background:var(--white);border-radius:24px;padding:60px 48px;max-width:560px;width:100%;text-align:center;box-shadow:0 20px 60px rgba(0,0,0,0.12);}
+  .check{width:80px;height:80px;background:var(--gold);border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto 28px;font-size:2.2rem;animation:pop .6s cubic-bezier(.175,.885,.32,1.275) both;}
+  @keyframes pop{from{transform:scale(0);opacity:0}to{transform:scale(1);opacity:1}}
+  h1{font-family:'Playfair Display',serif;font-size:2rem;color:var(--charcoal);margin-bottom:12px;}
+  h1 em{color:var(--gold);font-style:italic;}
+  .subtitle{color:#6b6b6b;font-size:0.95rem;line-height:1.7;margin-bottom:32px;}
+  .info-box{background:var(--beige);border-radius:14px;padding:20px 24px;margin-bottom:32px;text-align:left;}
+  .info-box p{font-size:0.88rem;color:var(--charcoal);margin-bottom:8px;}
+  .info-box p:last-child{margin:0;}
+  .info-box strong{color:var(--gold);}
+  .divider{border:none;border-top:1px solid #e5e5e5;margin:28px 0;}
+  .actions{display:flex;gap:14px;flex-wrap:wrap;justify-content:center;}
+  .btn-gold{display:inline-block;padding:13px 28px;border-radius:50px;background:var(--gold);color:var(--charcoal);font-weight:600;font-size:0.85rem;letter-spacing:1px;text-decoration:none;transition:all .3s;}
+  .btn-gold:hover{background:#a8893c;transform:translateY(-2px);}
+  .btn-outline{display:inline-block;padding:13px 28px;border-radius:50px;border:2px solid var(--gold);color:var(--gold);font-weight:600;font-size:0.85rem;letter-spacing:1px;text-decoration:none;transition:all .3s;}
+  .btn-outline:hover{background:var(--gold);color:var(--charcoal);}
+  .logo{font-family:'Playfair Display',serif;font-size:1.3rem;font-weight:700;color:var(--charcoal);margin-bottom:32px;display:block;}
+  .logo span{color:var(--gold);}
+  .wa-note{font-size:0.8rem;color:#6b6b6b;margin-top:20px;}
+</style>
+</head>
+<body>
+<a href="index.html" class="logo">Alimento<span>.</span></a>
+<div class="card">
+  <div class="check">✓</div>
+  <h1>Table <em>Reserved!</em></h1>
+  <p class="subtitle">
+    Thank you for your reservation at Alimento Restaurant &amp; Café.<br/>
+    We've received your booking and will call you within <strong>30 minutes</strong> to confirm.
+  </p>
+
+  <div class="info-box">
+    <p>📍 <strong>Location:</strong> FR89+5V Prayagraj, Uttar Pradesh, India</p>
+    <p>📞 <strong>Phone:</strong> +91 9161485886</p>
+    <p>✉️ <strong>Email:</strong> honor911n@gmail.com</p>
+    <p>🕐 <strong>Hours:</strong> Mon–Sun: 11:00 AM – 11:00 PM</p>
+  </div>
+
+  <hr class="divider"/>
+  <div class="actions">
+    <a href="index.html" class="btn-gold">← Back to Website</a>
+    <a href="https://wa.me/919161485886" target="_blank" rel="noopener" class="btn-outline">💬 WhatsApp Us</a>
+  </div>
+  <p class="wa-note">A WhatsApp message with your booking details was also sent to our team.</p>
+</div>
+</body>
+</html>
